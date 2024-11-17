@@ -22,6 +22,6 @@ export const StargateColors = {
   
   // Shades of grey for various purposes
   darkGrey: "#3d434b",  // Darker grey for subtle text or backgrounds
-  mediumGrey: "#8c8c8c", // Medium grey for less prominent text
+
   paleGrey: "#ececec",    // Pale grey for backgrounds or disabled elements
 };
