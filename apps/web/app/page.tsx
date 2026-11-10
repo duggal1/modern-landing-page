@@ -1,5 +1,6 @@
 'use client';
 import {useState} from 'react';
+import Link from 'next/link';
 import {ArrowRight, Github, Play, Pause, RotateCcw, Layers, AudioLines, Search, CheckCircle2, ChevronRight, GitBranch} from 'lucide-react';
 type Module={id:string;name:string;purpose:string;x:number;y:number;kind:string};
 const modules:Module[]=[
@@ -23,7 +24,7 @@ export default function Home(){
  <form onSubmit={submit} className="mt-9 flex flex-col sm:flex-row gap-2 max-w-[770px]"><label className="flex-1 flex gap-3 items-center bg-white/70 border border-[#d7d4ca] rounded-[12px] px-4 h-[56px]"><Github size={18} color="#83867d"/><input value={url} onChange={e=>setUrl(e.target.value)} placeholder="https://github.com/owner/repository" className="w-full bg-transparent outline-none text-[14px] placeholder:text-[#a4a49c]"/></label><button type="submit" className="h-[56px] bg-[#252725] hover:bg-black text-white rounded-[12px] px-6 flex gap-3 justify-center items-center text-[13px] font-semibold">Explore repository <ArrowRight size={16}/></button></form>
  {error&&<p role="alert" className="text-red-700 mt-2 text-sm">{error}</p>}
  {submitted&&<p role="status" className="mt-3 text-[13px] text-[#8a6347]">Analysis service is not connected yet. No repository has been scanned. The diagram below is a sample, not a result for your URL.</p>}
- <div className="mt-14 border border-[#dcd9cf] rounded-[18px] overflow-hidden bg-[#fbf9f3] shadow-[0_8px_36px_#22222208]">
+ <div className="mt-4"><Link href="/inspect" className="inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4">Inspect a real GitHub repository →</Link></div><div className="mt-14 border border-[#dcd9cf] rounded-[18px] overflow-hidden bg-[#fbf9f3] shadow-[0_8px_36px_#22222208]">
  <div className="flex flex-wrap justify-between items-center gap-3 border-b border-[#e2dfd6] px-5 md:px-7 py-4"><div className="flex gap-3 items-center"><Layers size={17}/><strong className="text-[13px]">Architecture canvas</strong><span className="mono text-[10px] text-[#85877e] bg-[#f0eee6] rounded-md px-2 py-1">SAMPLE DATA</span></div><div className="flex gap-4 text-[11px] text-[#85877e] mono"><span>05 modules</span><span>05 links</span><span>01 flow</span></div></div>
  <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px]"><div className="paper overflow-x-auto min-h-[400px]"><svg viewBox="0 0 920 470" role="img" aria-label="Illustrative architecture graph, not extracted from a repository" className="w-full min-w-[620px]">
  <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#8b8b80" strokeWidth="1.3"/></marker></defs>
