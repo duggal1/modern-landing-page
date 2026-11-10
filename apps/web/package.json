@@ -14,9 +14,7 @@
     "react-dom": "^19.2.0",
     "zod": "^4.0.0",
     "lucide-react": "^0.468.0",
-    "roughjs": "^4.6.6",
-    "@repo/render": "*",
-    "@repo/analyze": "*"
+    "roughjs": "^4.6.6"
   },
   "devDependencies": {
     "@types/node": "^22",
