@@ -1,0 +1,9 @@
+{
+  "name": "@repo/analyze",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@repo/schema": "*",
+    "web-tree-sitter": "^0.25.0"
+  }
+}

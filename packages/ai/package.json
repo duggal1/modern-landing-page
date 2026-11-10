@@ -1,0 +1,9 @@
+{
+  "name": "@repo/ai",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@repo/schema": "*",
+    "zod": "^4.0.0"
+  }
+}
