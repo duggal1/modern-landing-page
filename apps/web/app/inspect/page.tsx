@@ -1,0 +1,2 @@
+import Link from 'next/link';import RepositoryResult from '../components/repository-result';
+export default function Inspect(){return <main className="max-w-5xl mx-auto px-5 py-10"><Link href="/" className="mono text-xs text-[#85877e]">← Repo Explainer</Link><h1 className="mt-12 text-5xl font-semibold tracking-[-.06em]">Inspect real source.</h1><p className="mt-4 text-[#77786f] max-w-xl">A first working, bounded source inspection. Full parser-backed architecture, AI narration and video generation remain in development.</p><RepositoryResult/></main>}
